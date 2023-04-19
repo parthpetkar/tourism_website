@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)), url("file:///C:/Users/callo/OneDrive/Desktop/Git/meraBharat/images/fort.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex; 
+}
+.bg-1{
+    flex: 1;
+
+}
+.about-container{
+    width: 85%;
+    min-height: 80vh;
+    position: absolute;
+    background-color: white;
+    box-shadow: 24px 24px 30px #6d8dad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+.image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("file:///C:/Users/callo/OneDrive/Desktop/Git/meraBharat/images/backbutton.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+    .back-button:hover {
+        opacity: 0.8;
+    }
+
+    .back-button:active {
+        opacity: 0.6;
+    }
+
+    .back-button:focus {
+        outline: none;
+    }
+
+    .back-button::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        z-index: -1;
+    }
+
+    .back-button::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid white;
+    }
+
+    .back-button:focus::before,
+    .back-button:hover::before {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .back-button:active::before {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
